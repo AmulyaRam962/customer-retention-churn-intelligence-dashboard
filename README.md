@@ -40,12 +40,6 @@ This project aims to answer key business questions such as:
 
 ---
 
-## Dashboard Preview
-
-![Dashboard Overview](Images/dashboard_overview.png)
-
----
-
 ### Executive Summary
 
 ![Executive Summary](Images/executive_summary.png)
