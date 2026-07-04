@@ -1,1 +1,34 @@
+Total Customers =
+COUNT('churn_project customers'[customerID])
 
+Churned =
+CALCULATE(
+    COUNT('churn_project customers'[customerID]),
+    'churn_project customers'[Churn] = "Yes"
+)
+
+Retained =
+CALCULATE(
+    COUNT('churn_project customers'[customerID]),
+    'churn_project customers'[Churn] = "No"
+)
+
+Churn Rate =
+DIVIDE(
+    [Churned],
+    CALCULATE(
+        [Total Customers],
+        ALL('churn_project customers'[Churn])
+    )
+)
+
+Revenue Lost =
+CALCULATE(
+    SUM('churn_project customers'[MonthlyCharges]),
+    'churn_project customers'[Churn] = "Yes"
+)
+Average Monthly Charges =
+AVERAGE('churn_project fact_churn'[Monthly Charges])
+
+Selected Customers =
+COUNT('churn_project customers'[customerID])
