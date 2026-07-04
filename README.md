@@ -46,19 +46,25 @@ This project aims to answer key business questions such as:
 
 ---
 
-## Dashboard Pages
-
 ### Executive Summary
-Provides an overview of customer churn, retention performance, revenue impact, and contract behavior.
+
+![Executive Summary](Images/executive_summary.png)
 
 ### Customer Behavior Analysis
-Analyzes churn behavior across tenure, monthly charges, internet services, and technical support usage.
+
+![Customer Behavior Analysis](Images/behavior_analysis.png)
 
 ### Churn Drivers Analysis
-Identifies the major factors contributing to churn, including contract duration, online security adoption, and service type.
+
+![Churn Drivers Analysis](Images/churn_drivers.png)
 
 ### Customer Details Analysis
-Enables customer-level investigation of churn patterns and retention opportunities.
+
+![Customer Details Analysis](Images/customer_details.png)
+
+### Data Model
+
+![Data Model](Images/data_model.png)
 
 ---
 
