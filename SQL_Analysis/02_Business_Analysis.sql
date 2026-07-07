@@ -85,3 +85,10 @@ WHERE Contract = 'Month-to-month'
   AND TechSupport = 'No'
   AND Churn = 'Yes';
 
+ # Revenue lost to churn
+  SELECT 
+  ROUND(SUM(MonthlyCharges), 2) AS monthly_revenue_lost,
+  ROUND(AVG(MonthlyCharges), 2) AS avg_charges_churned
+FROM customers
+WHERE Churn = 'Yes';
+
