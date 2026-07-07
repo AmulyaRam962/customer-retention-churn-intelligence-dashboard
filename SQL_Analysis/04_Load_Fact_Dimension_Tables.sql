@@ -26,3 +26,21 @@ JOIN dim_services ds
     ON c.InternetService = ds.internet_service
     AND c.TechSupport = ds.tech_support
     AND c.OnlineSecurity = ds.online_security;
+
+VERIFY ROW COUNTS
+-- fact_churn should show 7043
+SELECT 'customers (original)' AS table_name, COUNT(*) AS total_rows FROM customers
+UNION ALL
+SELECT 'fact_churn',   COUNT(*) FROM fact_churn
+UNION ALL
+SELECT 'dim_contract', COUNT(*) FROM dim_contract
+UNION ALL
+SELECT 'dim_services', COUNT(*) FROM dim_services;
+TRUNCATE TABLE fact_churn;
+TRUNCATE TABLE dim_contract;
+TRUNCATE TABLE dim_services;
+SET SQL_SAFE_UPDATES = 0;
+DELETE FROM dim_contract;
+DELETE FROM dim_services;
+SET SQL_SAFE_UPDATES = 1;
+SELECT * FROM fact_churn LIMIT 10;
