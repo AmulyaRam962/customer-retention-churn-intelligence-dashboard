@@ -88,6 +88,7 @@ This project aims to answer key business questions such as:
 - Power BI
 - Power Query
 - DAX
+- MySQL
 - Python
 - Pandas
 - Matplotlib
